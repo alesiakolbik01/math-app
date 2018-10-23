@@ -135,6 +135,7 @@ h1{
     margin-left: 200px;
     display: inline-block;
     line-height: 49px;
+    flex-grow: 2;
 }
 h2 {
     text-align: center;

@@ -45,11 +45,11 @@ html, body, .container{
     min-height:30px;
     font-size: 10px;
 }
+
 .about-btn{
     font-size: 15px;
     padding: 0 10px;
     display: inline-block;
-    flex-grow: 2;
     text-align: right;
 }
 .about-btn i{
@@ -135,6 +135,7 @@ h1{
     margin-left: 200px;
     display: inline-block;
     line-height: 49px;
+    flex-grow: 2;
 }
 h2 {
     text-align: center;
