@@ -5,11 +5,25 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
+    outline: none;
 }
 html, body, .container{
     width: 100%;
     height: 100%;
 
+}
+
+::-webkit-scrollbar {
+    width:10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(203, 119, 0, 0.5);
 }
 
 .container{
@@ -22,14 +36,66 @@ html, body, .container{
     background-color: #3cd977;
     color:white;
     width: 100%;
-    height: 5%;
-    min-height: 34px;
     position: relative;
     display: flex;
     align-items:center;
+    height: 5%;
 }
+.header{
+    min-height:30px;
+    font-size: 10px;
+}
+.about-btn{
+    font-size: 15px;
+    padding: 0 10px;
+    display: inline-block;
+    flex-grow: 2;
+    text-align: right;
+}
+.about-btn i{
+    color:#ff9d21;
+}
+.about-app-info{
+    position: fixed;
+    background: white;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    color:#ff9d21;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.about-app-info p{
+    display: inline-block;
+    text-align: center;
+    border: solid 2px #ff9d21;
+    border-radius: 10px;
+    padding: 20px;
 
 
+}
+.footer{
+    justify-content: space-around;
+    min-height:50px;
+}
+.footer .footer-link a{
+    color: white;
+    text-decoration: none;
+}
+.footer p{
+    width: 20%;
+    text-align: center;
+}
+.footer .footer-link{
+    width: 60%;
+}
+.footer .footer-link a:hover{
+    color: #ff9d21;
+    text-decoration: none;
+}
 .columns {
     display: flex;
     align-content: stretch;
@@ -39,14 +105,14 @@ html, body, .container{
 }
 .column-one {
     -webkit-box-flex: 1;
-    flex: 1 1 0%;
+    flex: 1 1 0;
     overflow-y: auto;
     font-family: 'Modern Antiqua', cursive;
     color: #8b0d09;
 }
 .column-two {
     -webkit-box-flex: 1;
-    flex: 1 1 0%;
+    flex: 1 1 0;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -64,7 +130,7 @@ html, body, .container{
     padding: 10px;
 }
 h1{
-    font-family: 'Modern Antiqua', Arial, cursive;
+    font-family: 'Modern Antiqua', cursive;
     color:white;
     margin-left: 200px;
     display: inline-block;
@@ -85,6 +151,8 @@ h2 {
     margin-left: 20px;
     line-height: 50px;
 }
+
+
 
 
 
@@ -124,6 +192,9 @@ h2 {
     width: 100%;
     align-content: center
 }
+.button-resize:hover, .button-keypad-toggle.open:hover{
+    background: #ffffff;
+}
 
 .button-keypad{
     text-align: center;
@@ -139,7 +210,7 @@ h2 {
 #calculator.calculator-visible{
     bottom: 0;
     opacity: 1;
-
+    z-index: 1300;
 }
 
 .button-keypad-toggle{
@@ -150,6 +221,7 @@ h2 {
     text-align: center;
     padding: 5px;
     opacity: 0;
+    z-index: 1300;
 }
 .button-keypad-toggle.open{
     background: #dddddd;
@@ -251,7 +323,7 @@ h2 {
     width: 50%;
     height: 100%;
     -webkit-box-flex: 1;
-    flex: 1 1 0%;
+    flex: 1 1 0;
 }
 .container-left{
     margin-right:3px ;
@@ -278,7 +350,7 @@ h2 {
 
 .side-menu{
     position: absolute;
-    z-index: 200;
+    z-index: 1303;
     left: 0;
     top:0;
     background: #4dd959;
@@ -288,6 +360,7 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
 .fa-times{
     position: fixed;
     width: 50px;
@@ -307,14 +380,14 @@ h2 {
     position: fixed;
     align-items: center;
     justify-content: center;
-    z-index: 1200;
+    z-index: 1400;
     top:0;
     left:0;
     bottom: 0;
     right: 0;
     display: none;
     color: #0819b9;
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(255, 255, 255, 0.94);
 }
 .like i{
     font-size: 80px;
@@ -326,14 +399,14 @@ h2 {
     position: fixed;
     align-items: center;
     justify-content: center;
-    z-index: 1200;
+    z-index: 1400;
     top:0;
     left:0;
     bottom: 0;
     right: 0;
     display: none;
     color: #ff827e;
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(255, 255, 255, 0.93);
     white-space: pre;
 }
 .dislike i{
@@ -373,12 +446,14 @@ h2 {
 }
 #side-menu > span > a{
     color: #e38b00;
+    width: 200px;
+    display: inline-block;
     font-size: 22px;
     text-decoration: none;
-    font-family: 'Modern Antiqua', Arial, cursive;
+    font-family: 'Modern Antiqua', cursive;
     border-radius: 10px;
-    border:dotted 2px #e38b00;
-    padding:20px 40px;
+    border: dotted 2px #e38b00;
+    padding: 5px 0;
     background: #3cd977;
     transition: .3s background-color;
 }
@@ -403,7 +478,7 @@ div.header > i{
     .container-left {
         align-self: stretch;
     }
-    
+
     .container-left, .container-right {
         height: auto;
     }
@@ -414,14 +489,13 @@ div.header > i{
         font-size: 19px;
     }
     #calculator{
-       width: 100%;
+        width: 100%;
     }
-    body > div.container > div.header > h1{
+    div.container > div.header > h1{
         margin: 40px;
     }
     .side-menu{
         width:100%;
-        z-index: 1002;
     }
     .column-two{
         flex-direction: column;
@@ -431,6 +505,14 @@ div.header > i{
         width: 100%;
     }
     .container-left{
+        height: 400px;
+        width: 100%;
+    }
+    .footer{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .footer p{
         width: 100%;
     }
 
@@ -441,16 +523,14 @@ div.header > i{
 }
 
 .dimmer::before {
-  z-index: 9001;
-  cursor: pointer;
-  display: none;
-  position: fixed;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(65, 65, 65, 0.15);
-
+    z-index: 9001;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(65, 65, 65, 0.15);
 }
-
