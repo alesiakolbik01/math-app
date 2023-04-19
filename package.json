@@ -14,12 +14,13 @@
   "dependencies": {
     "body-parser": "1.18.2",
     "ejs": "2.5.7",
-    "express": "4.15.3"
+    "express": "4.15.3",
+    "graceful-fs": "4.2.2"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
-    "concurrently": "3.5.0",    
-    "gulp": "3.9.1",
+    "concurrently": "3.5.0",
+    "gulp": ">3.9.1",
     "gulp-htmlhint": "0.3.1",
     "gulp-minifier": "0.2.2"
   }

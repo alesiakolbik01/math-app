@@ -10,7 +10,7 @@
 html, body, .container{
     width: 100%;
     height: 100%;
-
+    font-family: math;
 }
 
 ::-webkit-scrollbar {
@@ -33,7 +33,7 @@ html, body, .container{
 }
 
 .header,.footer {
-    background-color: #3cd977;
+    background-color: #0d1d70;
     color:white;
     width: 100%;
     position: relative;
@@ -45,13 +45,16 @@ html, body, .container{
     min-height:30px;
     font-size: 10px;
 }
-.about-btn{
-    font-size: 15px;
-    padding: 0 10px;
-    display: inline-block;
-    flex-grow: 2;
-    text-align: right;
+.about-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 91px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    margin-right: 50px;
 }
+
 .about-btn i{
     color:#ff9d21;
 }
@@ -101,7 +104,6 @@ html, body, .container{
     align-content: stretch;
     width: 100%;
     flex-grow: 1;
-    border: 1px solid #FF9800;
 }
 .column-one {
     -webkit-box-flex: 1;
@@ -354,10 +356,9 @@ h2 {
     z-index: 1303;
     left: 0;
     top:0;
-    background: #4dd959;
+    background: #191b6c;
     width: 20%;
     height: 100vh;
-    border-right:solid #53b987 2px;
     display: flex;
     flex-direction: column;
 }
@@ -414,15 +415,40 @@ h2 {
     color: #ff9d21;
     transition: .5s all;
 }
-#btn-next,#btn-check{
-    border: none;
-    background: orange;
-    color:white;
-    border-radius: 2px;
-    padding: 5px;
-    cursor: pointer;
+
+#btn-next,#btn-check {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
     margin: 20px;
+    border: none;
 }
+#btn-next:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+
+#btn-check {
+    background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	background-color:#89c403;
+}
+
+#btn-check:hover {
+    background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	background-color:#77a809;
+}
+
 #btn-add-item > i{
     height: 100%;
     width: 35px;
@@ -446,20 +472,21 @@ h2 {
     font-size: 20px;
 }
 #side-menu > span > a{
-    color: #e38b00;
+    color: rgb(255, 255, 255);
     width: 200px;
     display: inline-block;
     font-size: 22px;
     text-decoration: none;
     font-family: 'Modern Antiqua',sans-serif;
     border-radius: 10px;
-    border: dotted 2px #e38b00;
-    padding: 5px 0;
-    background: #3cd977;
+    padding: 10px 15px;
+    background: rgb(68, 122, 219);
     transition: .3s background-color;
 }
 #side-menu > span > a:hover {
-    background: #e3ffc0;
+    background: #c0eeff;
+    color: #231376;
+    box-shadow: 1px 1px 20px 0px #f7f1f524;
 }
 div.header > i{
     color: #ff9800;
